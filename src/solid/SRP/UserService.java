@@ -20,10 +20,6 @@ public class UserService {
 		User user = new User(email, password);
 		database.save(user);
 		
-		sendWelcomeEmail(email);
-	}
-
-	private void sendWelcomeEmail(String email) {
 		smtpClient = new SmtpClientImplementation();
 		smtpClient.send(new MailMessage("mysite@nowhere.com", email, "Hello fool !"));
 	}
