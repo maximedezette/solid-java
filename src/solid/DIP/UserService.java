@@ -9,9 +9,9 @@ public class UserService {
 	private EmailService emailService;
 	private Database database;
 
-	public UserService(EmailService emailService, Database database) {
-		this.emailService = emailService;
-		this.database = database;
+	public UserService() {
+		this.emailService = new EmailService();
+		this.database = new Database();
 	}
 
 	public void register(String email, String password)

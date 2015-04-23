@@ -15,7 +15,7 @@ public class UserServiceBehavior {
 
 	@Before
 	public void setUp() throws Exception {
-		service = new UserService(new EmailService(), new Database());
+		service = new UserService();
 		Database.userIsSaved(false);
 		SmtpClient.mailIsSent(false);
 	}
