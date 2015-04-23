@@ -17,7 +17,7 @@ public class DuckBehavior {
 
 	@Test
 	public void electricDuckShouldSwim() {
-		Duck duck = new ElectricDuckImplementation();
+		Duck duck = new ElectricDuck();
 		
 		// pour faire fonctionner un canard électrique
 		// duck.TurnOn();

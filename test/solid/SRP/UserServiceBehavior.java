@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import solid.common.Database;
-import solid.common.SmtpClientImplementation;
+import solid.common.SmtpClient;
 import solid.common.ValidationException;
 
 public class UserServiceBehavior {
@@ -17,7 +17,7 @@ public class UserServiceBehavior {
 	public void setUp() throws Exception {
 		service = new UserService();
 		Database.userIsSaved(false);
-		SmtpClientImplementation.mailIsSent(false);
+		SmtpClient.mailIsSent(false);
 	}
 
 	@Test
@@ -31,7 +31,7 @@ public class UserServiceBehavior {
 	public void shouldSendEmailWhenEmailIsValid() throws ValidationException {
 		
 		service.register("toto@email.com", "toto");
-		assertTrue(SmtpClientImplementation.mailIsSent());
+		assertTrue(SmtpClient.mailIsSent());
 	}
 
 	@Test(expected=ValidationException.class) 
@@ -59,6 +59,6 @@ public class UserServiceBehavior {
 		} catch (ValidationException e) {
 		}
 
-		assertFalse(SmtpClientImplementation.mailIsSent());
+		assertFalse(SmtpClient.mailIsSent());
 	}
 }

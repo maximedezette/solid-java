@@ -1,12 +1,12 @@
 package solid.DIP;
 
 import solid.common.MailMessage;
-import solid.common.SmtpClientImplementation;
+import solid.common.SmtpClient;
 import solid.common.ValidationException;
 
-public class EmailServiceImplementation {
+public class EmailService {
 	
-	private SmtpClientImplementation smtpClient;
+	private SmtpClient smtpClient;
 
 	public void validateEmail(String email) {
 		if (!email.contains("@")) {
@@ -15,7 +15,7 @@ public class EmailServiceImplementation {
 	}
 
 	public void sendEmail(String email) {
-		smtpClient = new SmtpClientImplementation();
+		smtpClient = new SmtpClient();
 		smtpClient.send(new MailMessage("mysite@nowhere.com", email, "Hello fool !"));
 	}
 

@@ -1,6 +1,6 @@
 package solid.common;
 
-public class SmtpClientImplementation {
+public class SmtpClient {
 	
 	private static boolean mailIsSent;
 

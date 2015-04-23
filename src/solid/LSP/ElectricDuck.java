@@ -1,6 +1,6 @@
 package solid.LSP;
 
-public class ElectricDuckImplementation implements Duck {
+public class ElectricDuck implements Duck {
 
 	private boolean isTurnedOn = false;
 	private boolean hasMoved = false;

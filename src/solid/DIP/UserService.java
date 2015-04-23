@@ -6,10 +6,10 @@ import solid.common.ValidationException;
 
 public class UserService {
 
-	private EmailServiceImplementation emailService;
+	private EmailService emailService;
 	private Database database;
 
-	public UserService(EmailServiceImplementation emailService, Database database) {
+	public UserService(EmailService emailService, Database database) {
 		this.emailService = emailService;
 		this.database = database;
 	}
