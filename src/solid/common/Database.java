@@ -1,6 +1,6 @@
 package solid.common;
 
-public class Database {
+public class Database implements DataSource {
 	
 	private static boolean userIsSaved;
 
@@ -12,6 +12,10 @@ public class Database {
 		return userIsSaved;
 	}
 
+	/* (non-Javadoc)
+	 * @see solid.common.Database#save(solid.common.User)
+	 */
+	@Override
 	public void save(User user) {
 		userIsSaved = true;
 	}

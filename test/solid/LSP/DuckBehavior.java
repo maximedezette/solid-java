@@ -17,10 +17,10 @@ public class DuckBehavior {
 
 	@Test
 	public void electricDuckShouldSwim() {
-		Duck duck = new ElectricDuck();
+		ElectricDuck duck = new ElectricDuckImplementation();
 		
 		// pour faire fonctionner un canard électrique
-		// duck.TurnOn();
+		duck.turnOn();
 		duck.swim();
 		
 		assertTrue(duck.hasMoved());

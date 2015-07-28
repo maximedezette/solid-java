@@ -1,6 +1,6 @@
 package solid.ISP;
 
-public class Dog implements Animal {
+public class Dog implements Animal, Runnable {
 
 	@Override
 	public void Run() {
@@ -8,11 +8,6 @@ public class Dog implements Animal {
 
 	@Override
 	public void Bark() {
-	}
-
-	@Override
-	public void Fly() {
-		throw new IllegalStateException("dogs can't fly !");
 	}
 
 }

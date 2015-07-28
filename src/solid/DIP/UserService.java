@@ -1,5 +1,6 @@
 package solid.DIP;
 
+import solid.common.DataSource;
 import solid.common.Database;
 import solid.common.User;
 import solid.common.ValidationException;
@@ -7,11 +8,11 @@ import solid.common.ValidationException;
 public class UserService {
 
 	private EmailService emailService;
-	private Database database;
+	private DataSource datasource;
 
-	public UserService() {
-		this.emailService = new EmailService();
-		this.database = new Database();
+	public UserService(EmailService emailService, DataSource datasource) {
+		this.emailService = emailService;
+		this.datasource = datasource;
 	}
 
 	public void register(String email, String password)
@@ -19,7 +20,7 @@ public class UserService {
 		emailService.validateEmail(email);
 
 		User user = new User(email, password);
-		database.save(user);
+		datasource.save(user);
 
 		emailService.sendEmail(email);
 	}

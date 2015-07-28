@@ -1,6 +1,6 @@
 package solid.OCP;
 
-public class Rectangle {
+public class Rectangle implements Shape {
 	
 	private double height;
 	private double width;
@@ -16,5 +16,10 @@ public class Rectangle {
 
 	public double getWidth() {
 		return width;
+	}
+
+	@Override
+	public double area() {
+		return getHeight() * getWidth();
 	}
 }
