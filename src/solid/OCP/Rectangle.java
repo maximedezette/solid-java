@@ -2,19 +2,19 @@ package solid.OCP;
 
 public class Rectangle {
 	
-	private float height;
-	private float width;
+	private double height;
+	private double width;
 
-	public Rectangle(int height, int width) {
+	public Rectangle(double height, double width) {
 		this.height = height;
 		this.width = width;
 	}
 
-	public float getHeight() {
+	public double getHeight() {
 		return height;
 	}
 
-	public float getWidth() {
+	public double getWidth() {
 		return width;
 	}
 }

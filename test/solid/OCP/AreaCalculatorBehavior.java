@@ -17,7 +17,7 @@ public class AreaCalculatorBehavior {
 		List<Rectangle> rectangles = new ArrayList<Rectangle>();
 		rectangles.add(new Rectangle(10, 3));
 		
-		float area = calculator.area(rectangles);
+		double area = calculator.area(rectangles);
 		
 		assertEquals(30.0, area, 0.01);
 	}
@@ -29,7 +29,7 @@ public class AreaCalculatorBehavior {
 		rectangles.add(new Rectangle(10, 3));
 		rectangles.add(new Rectangle(4, 5));
 		
-		float area = calculator.area(rectangles);
+		double area = calculator.area(rectangles);
 		
 		assertEquals(50.0, area, 0.01);
 	}
@@ -39,7 +39,7 @@ public class AreaCalculatorBehavior {
 //		List<Circle> circles = new ArrayList<Circle>();
 //		circles.add(new Circle(5));
 //		
-//		float area = calculator.area(circles);
+//		double area = calculator.area(circles);
 //		
 //		assertEquals(78.5, area, 0.1);
 //	}
