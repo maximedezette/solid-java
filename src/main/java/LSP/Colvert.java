@@ -14,4 +14,8 @@ public class Colvert implements Duck {
 		this.hasMoved = true;
 	}
 
+	
+	public void turnOn() {
+	}
+
 }

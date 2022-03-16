@@ -15,14 +15,13 @@ public class DuckBehavior {
 		assertTrue(duck.hasMoved());
 	}
 
-	/*@Test
+	@Test
 	public void electricDuckShouldSwim() {
-		Duck duck = new ElectricDuck();
+		ElectricDuck duck = new ElectricDuckImpl();
 		
-		// pour faire fonctionner un canard électrique
-		// duck.TurnOn();
+		duck.turnOn();
 		duck.swim();
 		
 		assertTrue(duck.hasMoved());
-	}*/
+	}
 }

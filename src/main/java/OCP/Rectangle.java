@@ -1,6 +1,6 @@
 package OCP;
 
-public class Rectangle {
+public class Rectangle implements Shape {
 	
 	private double height;
 	private double width;
@@ -10,11 +10,8 @@ public class Rectangle {
 		this.width = width;
 	}
 
-	public double getHeight() {
-		return height;
-	}
-
-	public double getWidth() {
-		return width;
+	@Override
+	public double getArea() {
+		return this.height * this.width;
 	}
 }

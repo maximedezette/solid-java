@@ -14,7 +14,7 @@ public class AreaCalculatorBehavior {
 	@Test
 	public void shouldCalculateARectangleArea() {
 		
-		List<Rectangle> rectangles = new ArrayList<Rectangle>();
+		List<Shape> rectangles = new ArrayList<>();
 		rectangles.add(new Rectangle(10, 3));
 		
 		double area = calculator.area(rectangles);
@@ -25,7 +25,7 @@ public class AreaCalculatorBehavior {
 	@Test
 	public void shouldCalculateTotalAreaForTwoRectangles() {
 		
-		List<Rectangle> rectangles = new ArrayList<Rectangle>();
+		List<Shape> rectangles = new ArrayList<>();
 		rectangles.add(new Rectangle(10, 3));
 		rectangles.add(new Rectangle(4, 5));
 		
@@ -34,13 +34,12 @@ public class AreaCalculatorBehavior {
 		assertEquals(50.0, area, 0.01);
 	}
 	
-//	@Test
-//	public void shouldCalculateACircleArea() {
-//		List<Circle> circles = new ArrayList<Circle>();
-//		circles.add(new Circle(5));
-//		
-//		double area = calculator.area(circles);
-//		
-//		assertEquals(78.5, area, 0.1);
-//	}
+	@Test
+	public void shouldCalculateACircleArea() {
+		List<Shape> circles = List.of(new Circle(5));
+
+		double area = calculator.area(circles);
+
+		assertEquals(78.5, area, 0.1);
+	}
 }

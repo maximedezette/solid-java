@@ -8,15 +8,15 @@ public class UserService {
 	private SmtpClient smtpClient;
 
 	public void register(String email, String password) throws ValidationException {
-		if (!email.contains("@")) {
-			throw new ValidationException("Email is not a valid email");
-		}
-		
-		database = new Database();
+		EmailService emailService = new EmailService();
+		UserDAO userDAO = new UserDAO();
+
+		emailService.validateMail(email);
+
 		User user = new User(email, password);
-		database.save(user);
-		
-		smtpClient = new SmtpClient();
-		smtpClient.send(new MailMessage("mysite@nowhere.com", email, "Hello fool !"));
+
+		userDAO.save(user);
+
+		emailService.sendMail(email);
 	}
 }
